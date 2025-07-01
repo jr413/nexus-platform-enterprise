@@ -1,0 +1,131 @@
+name: バグレポート
+description: バグや問題の報告
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## バグレポートテンプレート
+        発見したバグや問題について詳細に報告してください。
+
+  - type: input
+    id: bug_summary
+    attributes:
+      label: バグの概要
+      description: バグの内容を一行で簡潔に説明
+      placeholder: "例: ログイン後にダッシュボードが表示されない"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 重要度
+      description: このバグの重要度を選択してください
+      options:
+        - Critical (システム停止)
+        - High (主要機能に影響)
+        - Medium (一部機能に影響)
+        - Low (軽微な問題)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: 現在の動作
+      description: 現在どのような問題が発生しているか詳細に記載
+      placeholder: "具体的な症状、エラーメッセージなど"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 期待される動作
+      description: 本来どのような動作をするべきか
+      placeholder: "正常な場合の期待される結果"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: 再現手順
+      description: バグを再現するための具体的な手順
+      placeholder: |
+        1. ページXにアクセス
+        2. ボタンYをクリック
+        3. フォームZに入力
+        4. バグが発生
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 発生頻度
+      description: このバグはどの程度の頻度で発生しますか
+      options:
+        - 常に発生 (100%)
+        - 頻繁に発生 (75%以上)
+        - たまに発生 (25-75%)
+        - まれに発生 (25%未満)
+        - 一度だけ発生
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: バグが発生した環境の詳細
+      placeholder: |
+        - OS: Windows 10, macOS 12.x, Ubuntu 20.04
+        - ブラウザ: Chrome 96.x, Firefox 95.x, Safari 15.x
+        - デバイス: Desktop, Mobile, Tablet
+        - 画面解像度: 1920x1080
+      value: |
+        - OS: 
+        - ブラウザ: 
+        - デバイス: 
+        - 画面解像度:
+    validations:
+      required: true
+
+  - type: textarea
+    id: console_logs
+    attributes:
+      label: ログ・エラーメッセージ
+      description: コンソールログ、エラーメッセージ、スタックトレースなど
+      placeholder: "関連するログやエラーメッセージをここに貼り付け"
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット・動画
+      description: 問題を示すスクリーンショットや動画があれば添付
+      placeholder: "画像をドラッグ&ドロップまたはURLを記載"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 追加情報
+      description: その他、バグの解決に役立つ情報があれば記載
+      placeholder: "関連するIssue、類似の問題、試行した解決方法など"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項
+      description: 以下を確認してからバグレポートを提出してください
+      options:
+        - label: 既存のIssueで同じ問題が報告されていないか確認した
+          required: true
+        - label: 最新バージョンで問題が発生することを確認した
+          required: true
+        - label: 再現手順が明確で第三者が再現可能である
+          required: true

@@ -1,0 +1,86 @@
+name: 機能要件
+description: 新しい機能や改善の要件を報告
+title: "[機能要件] "
+labels: ["feature", "requirement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 機能要件テンプレート
+        新しい機能や既存機能の改善要件を詳細に記載してください。
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: 機能名
+      description: 機能の名称を簡潔に記載
+      placeholder: "例: ユーザー認証機能"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: この機能の優先度を選択してください
+      options:
+        - 高 (High)
+        - 中 (Medium)
+        - 低 (Low)
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_value
+    attributes:
+      label: ビジネス価値
+      description: この機能が提供するビジネス価値を説明してください
+      placeholder: "この機能により、ユーザーは..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: functional_requirements
+    attributes:
+      label: 機能要件
+      description: 実装すべき機能の詳細を箇条書きで記載
+      placeholder: |
+        - 機能A: 詳細説明
+        - 機能B: 詳細説明
+        - 機能C: 詳細説明
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: 受け入れ基準
+      description: この機能が完成したと判断する基準
+      placeholder: |
+        - [ ] 基準1
+        - [ ] 基準2
+        - [ ] 基準3
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: 技術的考慮事項
+      description: 実装時の技術的な制約や考慮すべき点
+      placeholder: "使用技術、パフォーマンス要件、セキュリティ要件など"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依存関係
+      description: この機能に関連する他の機能やIssue
+      placeholder: "関連Issue番号、外部ライブラリ、API等"
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: モックアップ・参考資料
+      description: 画面設計、UI/UXの参考資料があれば添付
+      placeholder: "画像URL、Figmaリンク、参考サイト等"
