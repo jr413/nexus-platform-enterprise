@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Code, Zap, Users, Mail } from 'lucide-react';
+import { Menu, X, Code, Zap, Users, Mail, Globe } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 
@@ -53,8 +53,15 @@ export function Header() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className='hidden md:block'>
+          {/* Language & CTA Buttons */}
+          <div className='hidden md:flex items-center space-x-4'>
+            <Link
+              href='/jp'
+              className='flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors'
+            >
+              <Globe className='w-4 h-4' />
+              <span>日本語</span>
+            </Link>
             <Button
               onClick={() => {
                 const element = document.querySelector('#contact');
@@ -108,6 +115,14 @@ export function Header() {
                   <span>{item.name}</span>
                 </button>
               ))}
+              <Link
+                href='/jp'
+                className='flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors'
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Globe className='w-4 h-4' />
+                <span>日本語ページ</span>
+              </Link>
               <Button
                 className='w-full'
                 onClick={() => {

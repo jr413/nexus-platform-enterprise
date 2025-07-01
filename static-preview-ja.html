@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS Platform - 次世代ITソリューション</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between py-4">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </div>
+            <span
+              class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
+              NEXUS
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#services"
+              class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+              <span>サービス</span>
+            </a>
+            <a
+              href="#team"
+              class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+                ></path>
+              </svg>
+              <span>チーム</span>
+            </a>
+            <a
+              href="#contact"
+              class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <span>お問い合わせ</span>
+            </a>
+            <a
+              href="static-preview.html"
+              class="text-gray-500 hover:text-blue-600 transition-colors text-sm"
+              >English</a
+            >
+          </div>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center h-10 px-4 rounded-lg font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700"
+            >
+              お問い合わせ
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+      <!-- Background gradient -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"
+      ></div>
+
+      <!-- Background pattern -->
+      <div class="absolute inset-0 opacity-30">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full blur-xl"
+        ></div>
+        <div
+          class="absolute top-32 right-20 w-32 h-32 bg-purple-200 rounded-full blur-xl"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/3 w-24 h-24 bg-pink-200 rounded-full blur-xl"
+        ></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              ></path>
+            </svg>
+            <span>次世代ITソリューション</span>
+          </div>
+
+          <!-- Heading -->
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 animate-slide-up"
+          >
+            あなたの
+            <span
+              class="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
+              デジタル未来を変革
+            </span>
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up"
+          >
+            最先端技術で革新的なWebアプリケーションを開発。コンセプトから本番運用まで、
+            ビジネス成長と優れたユーザー体験を実現するソリューションを提供します。
+          </p>
+
+          <!-- CTA Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up"
+          >
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center h-12 px-6 text-lg rounded-lg font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700 group"
+            >
+              プロジェクトを開始
+              <svg
+                class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center h-12 px-6 text-lg rounded-lg font-medium transition-colors border border-gray-300 bg-transparent hover:bg-gray-100"
+            >
+              実績を見る
+            </a>
+          </div>
+
+          <!-- Features -->
+          <div class="flex flex-wrap justify-center gap-8 animate-slide-up">
+            <div class="flex items-center space-x-2 text-gray-600">
+              <svg
+                class="w-5 h-5 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+              <span class="font-medium">最新技術スタック</span>
+            </div>
+            <div class="flex items-center space-x-2 text-gray-600">
+              <svg
+                class="w-5 h-5 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                ></path>
+              </svg>
+              <span class="font-medium">Supabaseバックエンド</span>
+            </div>
+            <div class="flex items-center space-x-2 text-gray-600">
+              <svg
+                class="w-5 h-5 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+              <span class="font-medium">高性能</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 lg:py-32 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              ></path>
+            </svg>
+            <span>サービス</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            包括的ITソリューション
+            <span class="block text-blue-600">現代企業のために</span>
+          </h2>
+
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            企画から運用まで、ビジネスビジョンを強力なデジタルソリューションに変換する
+            エンドツーエンドのテクノロジーサービスを提供します。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Web Development -->
+          <div
+            class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+          >
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Web開発</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Next.js、React、TypeScriptなどの最先端技術で構築される、
+              モダンでレスポンシブなWebアプリケーション。
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Next.js & React開発</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>PWA（プログレッシブWebアプリ）</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Call Summary Support -->
+          <div
+            class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+          >
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              電話要約サポート
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              AI音声認識と自然言語処理を活用した、リアルタイム通話要約・分析システム。
+              会議や商談の効率化を実現します。
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>リアルタイム音声認識</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>AI要約・分析レポート</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>多言語対応・翻訳機能</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cloud Infrastructure -->
+          <div
+            class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+          >
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              クラウドインフラ
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              パフォーマンス、信頼性、コスト効率性を重視した、
+              スケーラブルなクラウドソリューション。
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>AWS & Google Cloud</span>
+              </li>
+              <li class="flex items-center space-x-2 text-sm text-gray-600">
+                <svg
+                  class="w-4 h-4 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>DevOps & CI/CD</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center mt-16">
+          <div
+            class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white"
+          >
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">
+              プロジェクトを始めませんか？
+            </h3>
+            <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+              あなたのアイデアを強力なデジタルソリューションに変換し、
+              ビジネスの成長と成功を促進する方法について話し合いましょう。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center h-12 px-6 text-lg rounded-lg font-medium transition-colors bg-white text-blue-600 hover:bg-gray-50"
+              >
+                無料相談を受ける
+              </a>
+              <a
+                href="#team"
+                class="inline-flex items-center justify-center h-12 px-6 text-lg rounded-lg font-medium transition-colors border border-white text-white hover:bg-white hover:text-blue-600"
+              >
+                ポートフォリオを見る
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 lg:py-32 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center space-x-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+              ></path>
+            </svg>
+            <span>チーム</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            あなたの成功を支える
+            <span class="block text-purple-600">エキスパートたち</span>
+          </h2>
+
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            情熱的な開発者、デザイナー、戦略家からなる多様なチームが、
+            手がけるすべてのプロジェクトに数十年の経験を結集します。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Team Member 1 -->
+          <div
+            class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200"
+          >
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto"
+              >
+                田中
+              </div>
+              <div
+                class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
+              >
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                田中 太郎
+              </h3>
+              <p class="text-purple-600 font-medium mb-2">CEO・共同創設者</p>
+              <div
+                class="flex items-center justify-center space-x-1 text-sm text-gray-500 mb-4"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>東京, 日本</span>
+              </div>
+            </div>
+
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              8年以上の経験を持つフルスタックアーキテクト。スケーラブルなWebアプリケーション構築に情熱を注ぎ、
+              クリーンなコードと革新的なソリューションを追求しています。
+            </p>
+
+            <div class="mb-6">
+              <div class="flex flex-wrap gap-2 justify-center">
+                <span
+                  class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-medium"
+                  >システム設計</span
+                >
+                <span
+                  class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-medium"
+                  >チームリーダー</span
+                >
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+              <div>
+                <div class="text-lg font-bold text-gray-900">50+</div>
+                <div class="text-xs text-gray-500">プロジェクト</div>
+              </div>
+              <div>
+                <div class="text-lg font-bold text-gray-900">8年</div>
+                <div class="text-xs text-gray-500">経験</div>
+              </div>
+              <div>
+                <div class="text-lg font-bold text-gray-900">25+</div>
+                <div class="text-xs text-gray-500">クライアント</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div
+            class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200"
+          >
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto"
+              >
+                佐藤
+              </div>
+              <div
+                class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
+              >
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                佐藤 花子
+              </h3>
+              <p class="text-purple-600 font-medium mb-2">CTO・共同創設者</p>
+              <div
+                class="flex items-center justify-center space-x-1 text-sm text-gray-500 mb-4"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>大阪, 日本</span>
+              </div>
+            </div>
+
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              クラウドインフラとスケーラブルなバックエンドシステムを専門とするDevOpsエキスパート。
+              すべてを自動化することに情熱を注いでいます。
+            </p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div
+            class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200"
+          >
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto"
+              >
+                鈴木
+              </div>
+              <div
+                class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
+              >
+                <div class="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                鈴木 美咲
+              </h3>
+              <p class="text-purple-600 font-medium mb-2">
+                リードフロントエンド開発者
+              </p>
+              <div
+                class="flex items-center justify-center space-x-1 text-sm text-gray-500 mb-4"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>福岡, 日本</span>
+              </div>
+            </div>
+
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              美しくアクセシブルなインターフェースを作成するUI/UX愛好家。
+              Reactエコシステムとモダンデザインシステムのエキスパート。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-32 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center space-x-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            <span>お問い合わせ</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            次のプロジェクトを
+            <span class="block text-green-600">始める準備はできましたか？</span>
+          </h2>
+
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            プロジェクトの要件について話し合い、最先端のテクノロジーソリューションで
+            あなたのビジョンを実現する方法を探りましょう。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                お気軽にご連絡ください
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-8">
+                あなたのプロジェクトについてお聞かせください。目標達成のために私たちの専門知識が
+                どのようにお役に立てるかご相談いたします。
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div
+                class="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white transition-colors duration-200"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    メールでお問い合わせ
+                  </h4>
+                  <a
+                    href="mailto:hello@nexusplatform.jp"
+                    class="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                  >
+                    hello@nexusplatform.jp
+                  </a>
+                  <p class="text-gray-600 text-sm mt-1">
+                    24時間以内にご返信いたします
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white transition-colors duration-200"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    お電話でのお問い合わせ
+                  </h4>
+                  <a
+                    href="tel:+81312345678"
+                    class="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                  >
+                    03-1234-5678
+                  </a>
+                  <p class="text-gray-600 text-sm mt-1">平日 9:00〜18:00</p>
+                </div>
+              </div>
+
+              <div
+                class="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white transition-colors duration-200"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white rounded-lg flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    電話要約サポート
+                  </h4>
+                  <p class="text-green-600 font-medium">
+                    AI音声認識・リアルタイム要約
+                  </p>
+                  <p class="text-gray-600 text-sm mt-1">
+                    通話内容の自動要約・分析・多言語対応
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Response Promise -->
+            <div
+              class="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-6 text-white"
+            >
+              <div class="flex items-center space-x-3 mb-3">
+                <svg
+                  class="w-6 h-6 text-green-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <h4 class="font-semibold">24時間以内返信保証</h4>
+              </div>
+              <p class="text-green-100 text-sm">
+                すべてのお問い合わせに24時間以内にご返信することをお約束します。
+                緊急の場合は、お気軽にお電話ください。
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              メッセージを送信
+            </h3>
+
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >お名前 *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="田中 太郎"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >メールアドレス *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="tanaka@company.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="project"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >プロジェクトタイプ *</label
+                >
+                <select
+                  id="project"
+                  name="project"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
+                >
+                  <option value="">プロジェクトタイプを選択</option>
+                  <option value="web-development">Web開発</option>
+                  <option value="call-summary">電話要約サポート</option>
+                  <option value="mobile-app">モバイルアプリ</option>
+                  <option value="cloud-infrastructure">クラウドインフラ</option>
+                  <option value="consulting">コンサルティング</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >プロジェクト詳細 *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 resize-none"
+                  placeholder="プロジェクトの要件、目標、必要な特定の機能についてお聞かせください..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center"
+              >
+                メッセージを送信
+                <svg
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+              <div class="space-y-6">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                  <div
+                    class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="text-xl font-bold text-white">NEXUS</span>
+                </div>
+
+                <p class="text-gray-400 leading-relaxed max-w-md">
+                  最先端技術で革新的なWebアプリケーションを開発。コンセプトから運用まで、
+                  ビジネス成長と優れたユーザー体験を実現するソリューションを提供します。
+                </p>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                  <a
+                    href="mailto:hello@nexusplatform.jp"
+                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group"
+                  >
+                    <svg
+                      class="w-4 h-4 group-hover:text-blue-400 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    <span class="text-sm">hello@nexusplatform.jp</span>
+                  </a>
+                  <a
+                    href="tel:+81312345678"
+                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group"
+                  >
+                    <svg
+                      class="w-4 h-4 group-hover:text-blue-400 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                    <span class="text-sm">03-1234-5678</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+              <h3 class="text-white font-semibold mb-6">サービス</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >Web開発</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >電話要約サポート</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >クラウドインフラ</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+              <h3 class="text-white font-semibold mb-6">会社情報</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#team"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >チーム</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >お問い合わせ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#team"
+                    class="text-gray-400 hover:text-white transition-colors text-sm"
+                    >採用</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 py-6">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="flex items-center space-x-1 text-gray-400 text-sm">
+              <span>© 2024 NEXUS Platform. 素晴らしいチームで</span>
+              <svg
+                class="w-4 h-4 text-red-500"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                ></path>
+              </svg>
+              <span>作られました。</span>
+            </div>
+
+            <div class="flex items-center space-x-1 text-gray-500 text-sm">
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+              <span>Next.js & Supabaseで動作</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for anchor links
+      document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
