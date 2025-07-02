@@ -5,7 +5,7 @@
   "outputDirectory": ".next",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "regions": ["hnd1", "sin1", "cdg1"],
+  "regions": ["hnd1"],
   "functions": {
     "app/api/**/*": {
       "runtime": "edge",
