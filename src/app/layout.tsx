@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
+});
 
 export const metadata: Metadata = {
   title: 'NEXUS Platform - 次世代Webアプリケーション開発 | 企業のDX推進を支援',
@@ -13,7 +15,6 @@ export const metadata: Metadata = {
   keywords:
     'Webアプリケーション開発, DX推進, SaaS開発, React, Next.js, デジタル変革, システム開発, IT企業, 業務効率化, モダン開発',
   authors: [{ name: 'NEXUS Platform開発チーム' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'NEXUS Platform - 次世代Webアプリケーション開発',
@@ -47,17 +48,26 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ja'>
-      <body className={`${inter.className} antialiased`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang='ja' className={inter.variable}>
+      <body className="font-sans antialiased">
+        <main className="min-h-screen">{children}</main>
       </body>
     </html>
   );
