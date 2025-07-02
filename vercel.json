@@ -6,12 +6,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "regions": ["hnd1"],
-  "functions": {
-    "app/api/**/*": {
-      "runtime": "edge",
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
