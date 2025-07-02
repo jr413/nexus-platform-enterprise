@@ -1,74 +1,101 @@
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
-});
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NEXUS Platform - 次世代Webアプリケーション開発 | 企業のDX推進を支援',
-  description:
-    '日本企業のデジタル変革を加速するNEXUSプラットフォーム。最新技術でWebアプリケーション開発からSaaS構築まで、あらゆるニーズに対応。導入実績300社以上、開発期間短縮70%を実現。',
-  keywords:
-    'Webアプリケーション開発, DX推進, SaaS開発, React, Next.js, デジタル変革, システム開発, IT企業, 業務効率化, モダン開発',
-  authors: [{ name: 'NEXUS Platform開発チーム' }],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'NEXUS Platform - 次世代Webアプリケーション開発',
-    description:
-      '日本企業のデジタル変革を加速するNEXUSプラットフォーム。導入実績300社以上、開発期間短縮70%を実現。',
-    url: 'https://nexus-platform.jp',
-    siteName: 'NEXUS Platform',
-    images: [
-      {
-        url: 'https://nexus-platform.jp/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'NEXUS Platform - 次世代Webアプリケーション開発',
-      },
-    ],
-    locale: 'ja_JP',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'NEXUS Platform - 次世代Webアプリケーション開発',
-    description: '日本企業のデジタル変革を加速するNEXUSプラットフォーム。',
-    images: ['https://nexus-platform.jp/twitter-image.jpg'],
-  },
-  alternates: {
-    canonical: 'https://nexus-platform.jp',
-    languages: {
-      'ja-JP': 'https://nexus-platform.jp',
-      'en-US': 'https://nexus-platform.jp/en',
-    },
-  },
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' }
-  ]
+  title: 'NEXUS Platform - 次世代Webアプリケーション開発',
+  description: '日本企業のDX推進を支援するNEXUSプラットフォーム',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang='ja' className={inter.variable}>
-      <body className="font-sans antialiased">
-        <main className="min-h-screen">{children}</main>
-      </body>
+    <html lang="ja">
+      <head>
+        <style>{`
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+          }
+          .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+          .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+          }
+          .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+          }
+          .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+          }
+          .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+          }
+          .btn:hover {
+            transform: translateY(-2px);
+          }
+          .features {
+            padding: 80px 0;
+          }
+          .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+          }
+          .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+          }
+          .feature-card {
+            padding: 30px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            text-align: center;
+          }
+          .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #667eea;
+          }
+          .feature-card p {
+            color: #666;
+          }
+          @media (max-width: 768px) {
+            .hero h1 {
+              font-size: 32px;
+            }
+            .hero p {
+              font-size: 16px;
+            }
+          }
+        `}</style>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
